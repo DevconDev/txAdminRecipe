@@ -34,7 +34,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v2.5.4/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v2.5.1/oxmysql.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
@@ -122,6 +122,67 @@ tasks:
     dest: ./resources/[defaultmaps]/[prison_map]
     ref: main
     src: https://github.com/qbcore-framework/prison_map
+
+  # PHONE
+
+  - action: download_github
+    dest: ./resources/[phone]/npwd
+    ref: master
+    src: https://github.com/qbcore-framework/npwd
+
+  - action: download_github
+    dest: ./resources/[phone]/qb-npwd
+    ref: main
+    src: https://github.com/qbcore-framework/qb-npwd
+
+  - action: download_file
+    path: ./tmp/files/npwd_qb_garage.zip
+    url: https://github.com/npwd-community/npwd_qb_garage/releases/download/1.0.6/npwd_qb_garage.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/npwd_qb_garage.zip
+
+  - action: download_file
+    path: ./tmp/files/npwd_services.zip
+    url: https://github.com/npwd-community/npwd_services/releases/download/1.0.5/npwd_services.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/npwd_services.zip
+
+  - action: download_file
+    path: ./tmp/files/npwd_qb_racing.zip
+    url: https://github.com/npwd-community/npwd_qb_racing/releases/download/v0.0.6/npwd_qb_racing.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/npwd_qb_racing.zip
+
+  - action: download_file
+    path: ./tmp/files/npwd_qb_banking.zip
+    url: https://github.com/npwd-community/npwd_qb_banking/releases/download/1.0.2/npwd_qb_banking.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/npwd_qb_banking.zip
+
+  - action: download_file
+    path: ./tmp/files/npwd_qb_mail.zip
+    url: https://github.com/npwd-community/npwd_qb_mail/releases/download/1.0.5/npwd_qb_mail.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/npwd_qb_mail.zip
+
+  - action: download_file
+    path: ./tmp/files/npwd_crypto.zip
+    url: https://github.com/npwd-community/npwd_crypto/releases/download/1.0.8/npwd_crypto.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/npwd_crypto.zip
+
+  - action: download_file
+    path: ./tmp/files/npwd_qb_housing.zip
+    url: https://github.com/npwd-community/npwd_qb_housing/releases/download/1.0.1/npwd_qb_housing.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/npwd_qb_housing.zip
 
   # Downloading QBCore resources
   - action: download_github
@@ -236,11 +297,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-radialmenu
 
   - action: download_github
-    dest: ./resources/[qb]/qb-crypto
-    ref: main
-    src: https://github.com/qbcore-framework/qb-crypto
-
-  - action: download_github
     dest: ./resources/[qb]/qb-weathersync
     ref: main
     src: https://github.com/qbcore-framework/qb-weathersync
@@ -269,11 +325,6 @@ tasks:
     dest: ./resources/[qb]/qb-mechanicjob
     ref: main
     src: https://github.com/qbcore-framework/qb-mechanicjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-phone
-    ref: main
-    src: https://github.com/qbcore-framework/qb-phone
 
   - action: download_github
     dest: ./resources/[qb]/qb-vineyard
