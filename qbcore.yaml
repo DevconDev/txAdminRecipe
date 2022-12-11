@@ -8,7 +8,7 @@ description: An advanced FiveM RP framework including jobs, gangs, housing & mor
 tasks:
   #  Download Base Files
   - action: download_github
-    src: https://github.com/DevconDev/txAdminRecipe
+    src: https://github.com/qbcore-framework/txAdminRecipe
     ref: main
     dest: ./tmp/qbcore
 
@@ -34,7 +34,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v2.5.1/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v2.5.4/oxmysql.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
@@ -122,8 +122,8 @@ tasks:
     dest: ./resources/[defaultmaps]/[prison_map]
     ref: main
     src: https://github.com/qbcore-framework/prison_map
-
-  # PHONE
+    
+    # PHONE
 
   - action: download_github
     dest: ./resources/[phone]/npwd
@@ -297,6 +297,11 @@ tasks:
     src: https://github.com/qbcore-framework/qb-radialmenu
 
   - action: download_github
+    dest: ./resources/[qb]/qb-crypto
+    ref: main
+    src: https://github.com/qbcore-framework/qb-crypto
+
+  - action: download_github
     dest: ./resources/[qb]/qb-weathersync
     ref: main
     src: https://github.com/qbcore-framework/qb-weathersync
@@ -325,6 +330,11 @@ tasks:
     dest: ./resources/[qb]/qb-mechanicjob
     ref: main
     src: https://github.com/qbcore-framework/qb-mechanicjob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-phone
+    ref: main
+    src: https://github.com/qbcore-framework/qb-phone
 
   - action: download_github
     dest: ./resources/[qb]/qb-vineyard
